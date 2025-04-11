@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SRHR Quest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>SRHR Quest</h1>
+      <p>Learn about Sexual & Reproductive Health and Rights</p>
+    </header>
+
+    <!-- Score + Badges -->
+    <div class="sticky-score">
+      <div class="score-container">
+        <div class="score" id="score">Score: 0</div>
+        <div class="progress-text">Progress: <span id="progressText">0%</span></div>
+      </div>
+      <div class="badges">
+        <div class="badge" id="badge1" title="Consent Champion">🤝</div>
+        <div class="badge" id="badge2" title="Contraception Expert">🛡️</div>
+        <div class="badge" id="badge3" title="Health Advocate">💪</div>
+        <div class="badge" id="badge4" title="Rights Defender">⚖️</div>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tab-container">
+      <div class="tab active" data-section="quiz">Quiz</div>
+      <div class="tab" data-section="consent">Consent</div>
+      <div class="tab" data-section="contraception">Contraception</div>
+      <div class="tab" data-section="health">Sexual Health</div>
+      <div class="tab" data-section="rights">Reproductive Rights</div>
+    </div>
+
+    <!-- Quiz Section -->
+    <div class="game-container active" id="quizSection">
+      <div class="question-container">
+        <div class="question" id="question">Loading question...</div>
+        <div class="options" id="options"></div>
+        <div class="info-container" id="infoContainer">
+          <div class="info-title">Did you know?</div>
+          <div class="info-text" id="infoText"></div>
+        </div>
+        <button class="next-btn" id="nextBtn">Next Question</button>
+      </div>
+    </div>
+
+    <!-- Consent Module -->
+    <div class="srhr-module" id="consentSection">
+      <h2>Understanding Consent</h2>
+      
+      <p>Consent is the foundation of healthy relationships and interactions. It means giving or receiving permission for something to happen through clear communication and mutual agreement.</p>
+      
+      <div class="key-concept">
+        <h3>The FRIES Model of Consent</h3>
+        <ul>
+          <li><strong>Freely given</strong> - Consent is given voluntarily without pressure, manipulation, or under the influence of substances.</li>
+          <li><strong>Reversible</strong> - Anyone can change their mind at any time, even if they've previously said yes.</li>
+          <li><strong>Informed</strong> - All parties understand what they're agreeing to.</li>
+          <li><strong>Enthusiastic</strong> - All participants should be excited and genuinely interested, not just going along with it.</li>
+          <li><strong>Specific</strong> - Saying yes to one activity doesn't mean consent for other activities.</li>
+        </ul>
+      </div>
+      
+      <h3>What Consent Is:</h3>
+      <ul>
+        <li>An ongoing process that requires clear communication</li>
+        <li>Required for all intimate activities, not just sex</li>
+        <li>Something that can be withdrawn at any time</li>
+        <li>Best when it's verbal, though nonverbal cues can support verbal consent</li>
+        <li>A mutual agreement between people who have the capacity to consent</li>
+      </ul>
+      
+      <h3>What Consent Is Not:</h3>
+      <ul>
+        <li>Assumed or implied based on clothing, past behavior, or relationship status</li>
+        <li>Silent or passive participation</li>
+        <li>Coerced through pressure, guilt, or threats</li>
+        <li>Possible when someone is incapacitated by alcohol, drugs, or sleep</li>
+        <li>A one-time discussion - it needs to be ongoing</li>
+      </ul>
+      
+      <div class="myth-fact">
+        <div class="myth">
+          <div class="myth-title">MYTH</div>
+          <p>If someone doesn't say "no" clearly, they're giving consent.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-title">FACT</div>
+          <p>The absence of "no" is not consent. Look for an enthusiastic, clear "yes" instead.</p>
+        </div>
+      </div>
+      
+      <h3>Age of Consent</h3>
+      <p>The age of consent is the age at which a person is legally considered able to agree to sexual activity. This varies by country and region (typically between 16-18 years old). People below the age of consent cannot legally give consent, even if they verbally agree.</p>
+      
+      <h3>Practicing Consent Communication</h3>
+      <p>Here are some examples of asking for consent:</p>
+      <ul>
+        <li>"Would you like to...?"</li>
+        <li>"Can I...?"</li>
+        <li>"Is this okay?"</li>
+        <li>"How does this feel?"</li>
+        <li>"Do you want to continue?"</li>
+      </ul>
+      
+      <p>Remember that consent is about respect, communication, and ensuring everyone feels safe and comfortable.</p>
+    </div>
+
+    <!-- Contraception Module -->
+    <div class="srhr-module" id="contraceptionSection">
+      <h2>Contraception Methods</h2>
+      
+      <p>Contraception allows individuals and couples to prevent pregnancy and plan if and when to have children. There are many different methods available, each with its own advantages, effectiveness rates, and considerations.</p>
+      
+      <h3>Why Use Contraception?</h3>
+      <ul>
+        <li>To prevent unintended pregnancies</li>
+        <li>To space pregnancies for health reasons</li>
+        <li>To allow for life planning and educational/career goals</li>
+        <li>Some methods also provide protection against sexually transmitted infections (STIs)</li>
+      </ul>
+      
+      <h3>Types of Contraception</h3>
+      
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>How It Works</th>
+          <th>Effectiveness</th>
+          <th>STI Protection</th>
+        </tr>
+        <tr>
+          <td>Condoms (external/male)</td>
+          <td>Barrier method that prevents sperm from entering the vagina</td>
+          <td>82-98% effective</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Condoms (internal/female)</td>
+          <td>Pouch inserted into the vagina to prevent sperm entry</td>
+          <td>79-95% effective</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Combined Hormonal Pills</td>
+          <td>Contains estrogen and progestin to prevent ovulation</td>
+          <td>91-99% effective</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Progestin-Only Pills</td>
+          <td>Contains only progestin, thickens cervical mucus</td>
+          <td>91-99% effective</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>IUD (hormonal)</td>
+          <td>Small T-shaped device inserted in uterus, releases hormones</td>
+          <td>99% effective</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>IUD (copper)</td>
+          <td>Non-hormonal device that creates an environment toxic to sperm</td>
+          <td>99% effective</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Implant</td>
+          <td>Small rod inserted under skin that releases hormones</td>
+          <td>99% effective</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Injection</td>
+          <td>Hormone shot given every 1-3 months</td>
+          <td>94-99% effective</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Patch</td>
+          <td>Adhesive patch worn on skin that releases hormones</td>
+          <td>91-99% effective</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Vaginal Ring</td>
+          <td>Flexible ring inserted in vagina that releases hormones</td>
+          <td>91-99% effective</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Emergency Contraception</td>
+          <td>Prevents pregnancy after unprotected sex</td>
+          <td>75-95% effective</td>
+          <td>No</td>
+        </tr>
+      </table>
+      
+      <div class="key-concept">
+        <h3>Dual Protection</h3>
+        <p>Using condoms plus another contraceptive method provides both pregnancy prevention and STI protection. This approach is recommended for maximum safety.</p>
+      </div>
+      
+      <h3>Factors to Consider When Choosing Contraception</h3>
+      <ul>
+        <li>Effectiveness rates</li>
+        <li>Side effects and health considerations</li>
+        <li>Convenience and ease of use</li>
+        <li>Cost and accessibility</li>
+        <li>Partner involvement</li>
+        <li>Future fertility plans</li>
+        <li>Personal values and beliefs</li>
+      </ul>
+      
+      <div class="myth-fact">
+        <div class="myth">
+          <div class="myth-title">MYTH</div>
+          <p>You can't get pregnant during your period.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-title">FACT</div>
+          <p>While less likely, pregnancy can occur during menstruation, especially with irregular cycles or shorter periods.</p>
+        </div>
+      </div>
+      
+      <h3>Access to Contraception</h3>
+      <p>Contraception can be obtained from healthcare providers, family planning clinics, pharmacies, and sometimes school health centers. Many countries have programs to provide free or low-cost contraception to those who need it.</p>
+      
+      <p>Remember that different methods work better for different individuals based on their unique health needs and circumstances. Consulting with a healthcare provider is the best way to find the most suitable method for you.</p>
+    </div>
+
+    <!-- Sexual Health Module -->
+    <div class="srhr-module" id="healthSection">
+      <h2>Sexual Health</h2>
+      
+      <p>Sexual health is a state of physical, emotional, mental, and social well-being in relation to sexuality. It's not merely the absence of disease but encompasses a positive and respectful approach to sexuality and relationships.</p>
+      
+      <h3>Components of Sexual Health</h3>
+      <ul>
+        <li>Knowledge about one's body and how it functions</li>
+        <li>Understanding sexual pleasure and satisfaction</li>
+        <li>Prevention and care of sexually transmitted infections (STIs)</li>
+        <li>Healthy relationship dynamics</li>
+        <li>Reproductive health and family planning</li>
+        <li>Body autonomy and informed decision-making</li>
+      </ul>
+      
+      <h3>Sexually Transmitted Infections (STIs)</h3>
+      <p>STIs are infections that are passed from one person to another through sexual contact. Common STIs include:</p>
+      <ul>
+        <li><strong>Chlamydia:</strong> Often has no symptoms but can cause serious reproductive problems if untreated.</li>
+        <li><strong>Gonorrhea:</strong> Can infect the genitals, rectum, and throat with varying symptoms.</li>
+        <li><strong>Syphilis:</strong> Progresses in stages with different symptoms at each stage.</li>
+        <li><strong>HIV:</strong> Attacks the immune system and can lead to AIDS if untreated.</li>
+        <li><strong>Herpes:</strong> Causes recurring outbreaks of sores but can be managed with medication.</li>
+        <li><strong>HPV:</strong> Some types can cause genital warts or certain cancers.</li>
+        <li><strong>Trichomoniasis:</strong> A parasitic infection that can cause genital irritation.</li>
+      </ul>
+      
+      <div class="key-concept">
+        <h3>STI Prevention</h3>
+        <p>Key strategies to prevent STIs include:</p>
+        <ul>
+          <li>Using barriers (condoms, dental dams) during sexual contact</li>
+          <li>Getting regularly tested and knowing your status</li>
+          <li>Communicating openly with partners about sexual health</li>
+          <li>Limiting sexual partners</li>
+          <li>Getting vaccinated (HPV, Hepatitis B)</li>
+          <li>Avoiding sexual activity during active infections</li>
+        </ul>
+      </div>
+      
+      <h3>Sexual Health Testing</h3>
+      <p>Regular testing is recommended for sexually active individuals:</p>
+      <ul>
+        <li>Testing frequency depends on risk factors, number of partners, and types of sexual activity</li>
+        <li>Many STIs can be asymptomatic (showing no symptoms)</li>
+        <li>Early detection leads to more effective treatment and prevents complications</li>
+        <li>Testing options include blood tests, urine tests, swabs, and physical examinations</li>
+        <li>Many clinics offer confidential or anonymous testing services</li>
+      </ul>
+      
+      <h3>Reproductive Health</h3>
+      <p>Reproductive health addresses the reproductive processes, functions, and systems at all stages of life:</p>
+      <ul>
+        <li><strong>Menstrual health:</strong> Understanding cycle patterns and managing menstruation</li>
+        <li><strong>Fertility awareness:</strong> Knowledge of fertile windows and reproductive capacity</li>
+        <li><strong>Pregnancy care:</strong> Prenatal, delivery, and postnatal health services</li>
+        <li><strong>Reproductive cancers:</strong> Prevention, detection, and treatment of breast, cervical, testicular, and prostate cancers</li>
+        <li><strong>Reproductive system disorders:</strong> Conditions like PCOS, endometriosis, or erectile dysfunction</li>
+      </ul>
+      
+      <div class="myth-fact">
+        <div class="myth">
+          <div class="myth-title">MYTH</div>
+          <p>You can tell if someone has an STI just by looking at them.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-title">FACT</div>
+          <p>Many STIs have no visible symptoms. The only way to know for sure is through testing.</p>
+        </div>
+      </div>
+      
+      <h3>Sexual Well-being</h3>
+      <p>Sexual well-being encompasses:</p>
+      <ul>
+        <li>Having a positive and respectful approach to sexuality</li>
+        <li>Experiencing sexual pleasure and satisfaction</li>
+        <li>Being free from coercion, discrimination, and violence</li>
+        <li>Having access to information and healthcare</li>
+        <li>Feeling comfortable discussing sexual needs and concerns</li>
+        <li>Understanding and respecting sexual diversity</li>
+      </ul>
+      
+      <p>Taking care of your sexual health is an important part of overall well-being and involves regular healthcare check-ups, open communication with partners, and making informed decisions about sexual activity.</p>
+    </div>
+
+    <!-- Reproductive Rights Module -->
+    <div class="srhr-module" id="rightsSection">
+      <h2>Reproductive Rights</h2>
+      
+      <p>Reproductive rights are the rights of individuals to make autonomous decisions about their reproductive health, including whether and when to have children. These rights form an essential component of human rights and are recognized internationally.</p>
+      
+      <h3>Core Reproductive Rights</h3>
+      <p>Reproductive rights include:</p>
+      <ul>
+        <li>The right to make reproductive decisions free from discrimination, coercion, and violence</li>
+        <li>The right to access sexual and reproductive health information and education</li>
+        <li>The right to access reproductive healthcare services</li>
+        <li>The right to bodily autonomy and integrity</li>
+        <li>The right to decide freely on the number and spacing of children</li>
+        <li>The right to privacy in making reproductive decisions</li>
+        <li>The right to equality and non-discrimination in all matters related to reproduction</li>
+      </ul>
+      
+      <div class="key-concept">
+        <h3>International Frameworks</h3>
+        <p>Several international agreements support reproductive rights:</p>
+        <ul>
+          <li><strong>Universal Declaration of Human Rights (1948)</strong></li>
+          <li><strong>Convention on the Elimination of All Forms of Discrimination Against Women (CEDAW, 1979)</strong></li>
+          <li><strong>International Conference on Population and Development (ICPD, 1994)</strong></li>
+          <li><strong>Beijing Declaration and Platform for Action (1995)</strong></li>
+          <li><strong>Sustainable Development Goals (SDGs, 2015)</strong></li>
+        </ul>
+      </div>
+      
+      <h3>Access to Services</h3>
+      <p>Reproductive rights encompass access to essential services:</p>
+      <ul>
+        <li><strong>Family planning services:</strong> Access to contraception and fertility services</li>
+        <li><strong>Safe abortion care:</strong> Where legal, access to safe abortion and post-abortion care</li>
+        <li><strong>Maternal healthcare:</strong> Prenatal, delivery, and postnatal care</li>
+        <li><strong>STI prevention and treatment:</strong> Including HIV/AIDS services</li>
+        <li><strong>Fertility treatments:</strong> For those experiencing difficulties conceiving</li>
+        <li><strong>Sexual education:</strong> Age-appropriate comprehensive sexuality education</li>
+      </ul>
+      
+      <h3>Reproductive Justice</h3>
+      <p>The reproductive justice framework goes beyond individual rights to address systemic inequalities:</p>
+      <ul>
+        <li>The right to have children</li>
+        <li>The right not to have children</li>
+        <li>The right to parent children in safe and healthy environments</li>
+        <li>The right to bodily autonomy free from any form of reproductive oppression</li>
+      </ul>
+      <p>This framework recognizes that reproductive decisions are influenced by social, economic, and environmental factors like poverty, racism, and lack of healthcare access.</p>
+      
+      <div class="myth-fact">
+        <div class="myth">
+          <div class="myth-title">MYTH</div>
+          <p>Reproductive rights only concern women.</p>
+        </div>
+        <div class="fact">
+          <div class="fact-title">FACT</div>
+          <p>Reproductive rights impact everyone regardless of gender. All people should have access to information and services to make informed decisions about their reproductive health.</p>
+        </div>
+      </div>
+      
+      <h3>Barriers to Reproductive Rights</h3>
+      <p>Many barriers continue to limit access to reproductive rights:</p>
+      <ul>
+        <li>Legal restrictions and criminalization</li>
+        <li>Limited availability of services, especially in rural areas</li>
+        <li>High costs and lack of insurance coverage</li>
+        <li>Cultural or religious stigma</li>
+        <li>Misinformation and lack of education</li>
+        <li>Discrimination against marginalized groups</li>
+        <li>Coercive practices like forced sterilization</li>
+      </ul>
+      
+      <h3>Advocacy for Reproductive Rights</h3>
+      <p>Supporting reproductive rights can take many forms:</p>
+      <ul>
+        <li>Staying informed about reproductive rights issues</li>
+        <li>Voting for policies and representatives who support reproductive rights</li>
+        <li>Supporting organizations that provide reproductive healthcare</li>
+        <li>Challenging stigma and misinformation</li>
+        <li>Advocating for comprehensive sexuality education</li>
+        <li>Promoting inclusive reproductive healthcare that meets everyone's needs</li>
+      </ul>
+      
+      <p>Reproductive rights are fundamental human rights that ensure everyone can make informed choices about their bodies, relationships, and futures.</p>
+    </div>
+
+  </div>
+
+  <!-- Celebration Bar -->
+  <div class="celebration" id="celebration"></div>
+
+  <!-- Script -->
+  <script src="app.js"></script>
+</body>
+</html>
